@@ -1,4 +1,5 @@
-﻿#$GPOs = Get-GPO -all
+# Restore-GPO can not import GPO's from a different forest so this seeks todo that.
+
 $GPOGUIDs = Get-ChildItem -Path C:\Users\admin01\Downloads\GPOs\GPOs
 $arrayGPOExclusion = ("Default Domain Controllers Policy" , "Default Domain Policy")
 ForEach ($GPOGUID in $GPOGUIDs){
